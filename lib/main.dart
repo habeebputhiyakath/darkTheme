@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:light_dark_mode/home_page.dart';
+import 'package:light_dark_mode/theme/theme.dart';
+import 'package:light_dark_mode/view/home_page.dart';
 
 void main(List<String> args) {
+    WidgetsFlutterBinding.ensureInitialized();
   runApp(myapp());
 }
 class myapp extends StatelessWidget {
@@ -11,7 +13,11 @@ class myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Homepage(),
-      
+     theme: lightMode,
+       
+      darkTheme: darkMode,
+     
+     
     );
     
   }
