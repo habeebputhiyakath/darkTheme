@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:light_dark_mode/theme/theme.dart';
+import 'package:light_dark_mode/modal/theme.dart';
 
 class ThemeProvider with ChangeNotifier {
          
