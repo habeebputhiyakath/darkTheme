@@ -15,14 +15,32 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
-        child: Container(width: 300,height: 300,
-       decoration: BoxDecoration(color: Theme.of(context).colorScheme.primary,borderRadius: BorderRadius.circular(20)),
-        child:TextButton(onPressed: () {
-          Provider.of<ThemeProvider>(context,listen: false).changeTheme();
-        }, child: Text("dark", style: TextStyle(color: Theme.of(context).colorScheme.secondary ),)) ,
-        
-        ),
+        child: Container(
+            width: 300,
+            height: 300,
+            decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: BorderRadius.circular(20)),
+            // child:TextButton(onPressed: () {
+            //   Provider.of<ThemeProvider>(context,listen: false).changeTheme();
+            // },
+            // child: Center(
+            //   // child: Text(
+            //   //   "dark",
+            //   //   style: TextStyle(color: Theme.of(context).colorScheme.secondary),
+            //   // ),
+            // )
+            ),
       ),
+
+      floatingActionButton:FloatingActionButton(
+       
+        onPressed: () {
+             Provider.of<ThemeProvider>(context,listen: false).changeTheme();
+        },
+        backgroundColor: Colors.grey.shade100,
+        child: const Icon(Icons.color_lens,),
+        ) ,
     );
   }
 }
